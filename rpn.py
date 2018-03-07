@@ -36,6 +36,11 @@ def calculate(arg):
 				while len(stack) > 0:
 					result += stack.pop()
 				stack.append(result)
+			elif token == '^':
+				arg2 = stack.pop()
+				arg1 = stack.pop()
+				result = arg1 ** arg2
+				stack.append(result)	
 			else: 
 				function = operators[token]
 				arg2 = stack.pop()
