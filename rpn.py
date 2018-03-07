@@ -36,9 +36,6 @@ def calculate(arg):
 				while len(stack) > 0:
 					result += stack.pop()
 				stack.append(result)
-			elif token == '*':
-				stack.append(stack.pop())
-				stack.append(stack[len(stack) -1])
 			else: 
 				function = operators[token]
 				arg2 = stack.pop()
