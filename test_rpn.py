@@ -20,4 +20,7 @@ class TestBasics(unittest.TestCase):
 	def test_summation(self):
 		result = rpn.calculate('3 5 8 $')
 		self.assertEqual(16, result)
+	def test_exponent(self):
+		result = rpn.calculate('3 4 ^')
+		self.assertEqual(81, result)
 
